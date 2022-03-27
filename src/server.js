@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
 
