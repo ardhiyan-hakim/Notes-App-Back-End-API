@@ -32,10 +32,22 @@ const addNoteHanlder = (request, h) => {
   const response = h.response({
     status: 'fail',
     message: 'Catatan gagal ditambahkan',
-  })
+  });
 
   response.code(500);
   return response;
 };
 
-module.exports = { addNoteHanlder };
+const getAllNotesHandler = (request, h) => {
+  const response = h.response({
+    status: 'success',
+    data: {
+      notes,
+    },
+  });
+
+  response.code(200);
+  return response;
+};
+
+module.exports = { addNoteHanlder, getAllNotesHandler };
